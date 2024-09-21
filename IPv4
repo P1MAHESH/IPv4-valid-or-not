@@ -1,0 +1,32 @@
+#This will check for the valid IPv4 address and return you whether the address you have entered is valid IPv4 or not.
+#This is done by PATTIMANI MAHESH
+
+def IPv4(liststr):
+    t = liststr.split('.')  # Split the string at each dot
+    print(t)
+    w=[]
+    s=''
+    c='false'
+    v='true'
+    for i in range(0,len(t)):
+        if len(t)==4 and t[i]!='':
+            q=int(t[i])
+            t[i]=q
+            if t[i]<255:
+                w.append(v)
+            elif t[i]>255:
+                w.append(c)
+                break
+        else:
+            pass
+            break
+    if c in w:
+        print('false')
+    elif s in t:
+        print('false')
+    elif len(t)!=4:
+        print('false')
+    else:
+        print('true')
+str=input("Enter the string : ")
+IPv4(str)
